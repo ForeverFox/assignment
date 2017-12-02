@@ -15,6 +15,16 @@ Light Gray: #D5DBD8
   padding: 0;
 }
 
+.clearfix {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clearfix:after {
+  clear: both; }
+
 body {
   margin: 0;
   padding: 0;
@@ -61,6 +71,7 @@ article.generous-donation h2 {
 .date {
   display: block;
   font-size: 0.85em;
+  padding: 0 0 0.5rem 0;
 }
 
 .wrapper {
@@ -139,9 +150,8 @@ article.generous-donation h2 {
 
 /* CSS added by me */
 .figure {
-  width: 150px;
-  height: auto;
-  padding: 1rem 0;
+  position: relative;
+  width: 300px;
   margin: 0;
   float: left;
 }
@@ -151,3 +161,41 @@ article.generous-donation h2 {
   cursor: pointer;
 }
 
+.figure p {
+  margin: 0;
+  padding: 1rem;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #dcdcdc;
+  color: black;
+  opacity: 0.3;
+  text-align: center;
+  font-size: 0.75rem;
+  padding: 0.5rem;
+}
+
+.content {
+  width: 100%;
+  margin: 0 auto;
+  display: none;
+}
+
+.content p {
+  padding: 1em 0;
+  line-height: 1.6;
+}
+
+.clickToRead {
+  width: 10rem;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+.info {
+  margin-left: -300px;
+  z-index: -1000;
+}

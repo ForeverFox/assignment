@@ -25,7 +25,7 @@ var churchillSpeech = {
 - accepts speechesArray data 
 - returns author and year for each speech in speechesArray */
 function getAuthorAndYearString (speechData) {
-  return 'This speech was written by ' + speechesArray[speechData].author + ' in ' + speechesArray[speechData].year + "." + '<br>';
+  return '<p>This speech was written by ' + speechesArray[speechData].author + ' in ' + speechesArray[speechData].year + "." + '</p>';
 };
 
 /* displayBCEString function:
@@ -34,9 +34,9 @@ function getAuthorAndYearString (speechData) {
 - returns string declaring whether speech took place before or after the common era */
 function displayBCEString (speechData) {
   if(speechesArray[speechData].yearIsBCE === true){
-    return 'This speech took place before the common era.<br>';
+    return '<p>This speech took place before the common era.</p>';
   }else{
-    return 'This speech took place during the common era.<br>';
+    return '<p>This speech took place during the common era.</p>';
   }
 };
 
@@ -59,12 +59,12 @@ function getOldestOrYoungestString (speechData) {
   }
 
   if(speechesArray[speechData].year === oldest){
-    return 'This is the oldest speech on the page.<br>';
+    return '<p>This is the oldest speech on the page.</p>';
   }
   if(speechesArray[speechData].year === newest){
-    return 'This is the most recent speech on the page.<br>';
+    return '<p>This is the most recent speech on the page.</p>';
   } else {
-    return "This is neither the oldest nor the most recent speech on the page.<br>";
+    return "<p>This is neither the oldest nor the most recent speech on the page.</p>";
   }
 };
 
@@ -97,7 +97,7 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
   document.getElementById('ConsoleDisplay').innerHTML = getAuthorAndYearString(0);
   document.getElementById('ConsoleDisplay').innerHTML += displayBCEString(0);
   document.getElementById('ConsoleDisplay').innerHTML += getOldestOrYoungestString(0);
-});*/
+});
 
 document.getElementById('BtnGhandi').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Ghandi" button.
@@ -111,15 +111,87 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
   document.getElementById('ConsoleDisplay').innerHTML = getAuthorAndYearString(2);
   document.getElementById('ConsoleDisplay').innerHTML += displayBCEString(2);
   document.getElementById('ConsoleDisplay').innerHTML += getOldestOrYoungestString(2);
-});
+});*/
 
 
-// The following jQuery was added by me:
+// I've added the following code:
 $("document").ready(function() {
-  $("#BtnChurchill").on("click", function(info) {
+  $("#BtnChurchill").click(function(info) {
+    $("#churchillInfo").animate({left: "300"}, 1000, "swing");
   document.getElementById("churchillInfo").innerHTML = getAuthorAndYearString(0);
   document.getElementById("churchillInfo").innerHTML += displayBCEString(0);
   document.getElementById("churchillInfo").innerHTML += getOldestOrYoungestString(0);
   });
 
+  $("#BtnGhandi").click(function(info) {
+    $("#gandhiInfo").animate({left: "300"}, 1000, "swing");
+  document.getElementById("gandhiInfo").innerHTML = getAuthorAndYearString(1);
+  document.getElementById("gandhiInfo").innerHTML += displayBCEString(1);
+  document.getElementById("gandhiInfo").innerHTML += getOldestOrYoungestString(1);
+  });  
+
+  $("#BtnDemosthenes").click(function(info) {
+    $("#demosthenesInfo").animate({left: "300"}, 1000, "swing");
+  document.getElementById("demosthenesInfo").innerHTML = getAuthorAndYearString(2);
+  document.getElementById("demosthenesInfo").innerHTML += displayBCEString(2);
+  document.getElementById("demosthenesInfo").innerHTML += getOldestOrYoungestString(2);
+  });
+
+  $("#readChurchill").click(function() {
+    $("#churchillContent").fadeToggle("slow");
+  });
+
+  $("#readGandhi").click(function() {
+    $("#gandhiContent").fadeToggle("slow");
+  });
+
+  $("#readDemosthenes").click(function() {
+    $("#demosthenesContent").fadeToggle("slow");
+  });  
+
+// using the Magnific Popup jQuery plugin to display images:
+  $("#Churchill .image-popup-no-margins").magnificPopup({
+    type: 'image',
+    closeOnContentClick: true,
+    closeBtnInside: false,
+    fixedContentPos: true,
+    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+    image: {
+      verticalFit: true
+    },
+    zoom: {
+      enabled: true,
+      duration: 300 // don't foget to change the duration also in CSS
+    }
+  });
+
+  $("#Ghandi .image-popup-no-margins").magnificPopup({
+    type: 'image',
+    closeOnContentClick: true,
+    closeBtnInside: false,
+    fixedContentPos: true,
+    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+    image: {
+      verticalFit: true
+    },
+    zoom: {
+      enabled: true,
+      duration: 300 // don't foget to change the duration also in CSS
+    }
+  });
+
+  $("#Demosthenes .image-popup-no-margins").magnificPopup({
+    type: 'image',
+    closeOnContentClick: true,
+    closeBtnInside: false,
+    fixedContentPos: true,
+    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+    image: {
+      verticalFit: true
+    },
+    zoom: {
+      enabled: true,
+      duration: 300 // don't foget to change the duration also in CSS
+    }
+  });       
 });
