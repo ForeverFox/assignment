@@ -148,12 +148,13 @@ article.generous-donation h2 {
   clear: both;
 }
 
-/* CSS added by me */
+/* I added the following CSS: */
 .figure {
   position: relative;
   width: 300px;
   margin: 0;
   float: left;
+  background-color: #2B2828;
 }
 
 .figure img {
@@ -166,13 +167,17 @@ article.generous-donation h2 {
   padding: 1rem;
 }
 
+#churchillFigure, #gandhiFigure, #demosthenesFigure {
+  display: none;
+  visibility: visible;
+}
+
 figcaption {
   position: absolute;
   bottom: 0;
-  width: 100%;
+  right: 0;
   background-color: #dcdcdc;
   color: black;
-  opacity: 0.3;
   text-align: center;
   font-size: 0.75rem;
   padding: 0.5rem;
@@ -193,6 +198,8 @@ figcaption {
   width: 10rem;
   padding: 1rem 0;
   cursor: pointer;
+  display: none;
+  color: Tan;
 }
 
 .info {

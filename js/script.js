@@ -117,24 +117,30 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
 // I've added the following code:
 $("document").ready(function() {
   $("#BtnChurchill").click(function(info) {
+    $("#churchillFigure").show();
     $("#churchillInfo").animate({left: "300"}, 1000, "swing");
-  document.getElementById("churchillInfo").innerHTML = getAuthorAndYearString(0);
-  document.getElementById("churchillInfo").innerHTML += displayBCEString(0);
-  document.getElementById("churchillInfo").innerHTML += getOldestOrYoungestString(0);
+    document.getElementById("churchillInfo").innerHTML = getAuthorAndYearString(0);
+    document.getElementById("churchillInfo").innerHTML += displayBCEString(0);
+    document.getElementById("churchillInfo").innerHTML += getOldestOrYoungestString(0);
+    $("#readChurchill").fadeTo(1000, 0.7).fadeTo(800, 0.3).fadeTo(600, 1.0);
   });
 
   $("#BtnGhandi").click(function(info) {
+    $("#gandhiFigure").show();
     $("#gandhiInfo").animate({left: "300"}, 1000, "swing");
-  document.getElementById("gandhiInfo").innerHTML = getAuthorAndYearString(1);
-  document.getElementById("gandhiInfo").innerHTML += displayBCEString(1);
-  document.getElementById("gandhiInfo").innerHTML += getOldestOrYoungestString(1);
+    document.getElementById("gandhiInfo").innerHTML = getAuthorAndYearString(1);
+    document.getElementById("gandhiInfo").innerHTML += displayBCEString(1);
+    document.getElementById("gandhiInfo").innerHTML += getOldestOrYoungestString(1);
+    $("#readGandhi").fadeTo(1000, 0.7).fadeTo(800, 0.3).fadeTo(600, 1.0);
   });  
 
   $("#BtnDemosthenes").click(function(info) {
+    $("#demosthenesFigure").show();
     $("#demosthenesInfo").animate({left: "300"}, 1000, "swing");
-  document.getElementById("demosthenesInfo").innerHTML = getAuthorAndYearString(2);
-  document.getElementById("demosthenesInfo").innerHTML += displayBCEString(2);
-  document.getElementById("demosthenesInfo").innerHTML += getOldestOrYoungestString(2);
+    document.getElementById("demosthenesInfo").innerHTML = getAuthorAndYearString(2);
+    document.getElementById("demosthenesInfo").innerHTML += displayBCEString(2);
+    document.getElementById("demosthenesInfo").innerHTML += getOldestOrYoungestString(2);
+    $("#readDemosthenes").fadeTo(1000, 0.7).fadeTo(800, 0.3).fadeTo(600, 1.0);
   });
 
   $("#readChurchill").click(function() {
@@ -149,7 +155,7 @@ $("document").ready(function() {
     $("#demosthenesContent").fadeToggle("slow");
   });  
 
-// using the Magnific Popup jQuery plugin to display images:
+// using the Magnific Popup jQuery plugin to enlarge images:
   $("#Churchill .image-popup-no-margins").magnificPopup({
     type: 'image',
     closeOnContentClick: true,
