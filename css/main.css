@@ -206,3 +206,8 @@ figcaption {
   margin-left: -300px;
   z-index: -1000;
 }
+
+
+.date {
+  padding-bottom: 1rem;
+}
