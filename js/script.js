@@ -114,9 +114,6 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
   document.getElementById('ConsoleDisplay').innerHTML += getOldestOrYoungestString(2);
 });*/
 
-
-//!!!!!!!!!NEED TO ADD SOMETHING COOL TO THE DONATE BUTTON!!!!!!!!!
-
 // I've added the following code:
 $("document").ready(function() { 
   $("#BtnChurchill").click(function(info) {
