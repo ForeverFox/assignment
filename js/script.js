@@ -6,7 +6,7 @@ var churchillSpeech = {
       'authorAge': '66'
     },
     ghandiSpeech = {
-      'author': 'Ghandi',
+      'author': 'Gandhi',
       'year': 1942,
       'yearIsBCE': false,
       'authorAge': '73'
@@ -92,7 +92,8 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
   document.getElementById('SideNav').appendChild(donationDisplay);
 });
 
-/*document.getElementById('BtnChurchill').addEventListener('click', function(){
+/* Previous code from week 8 assignment:
+document.getElementById('BtnChurchill').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Churchill" button.
   document.getElementById('ConsoleDisplay').innerHTML = getAuthorAndYearString(0);
   document.getElementById('ConsoleDisplay').innerHTML += displayBCEString(0);
@@ -113,6 +114,8 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
   document.getElementById('ConsoleDisplay').innerHTML += getOldestOrYoungestString(2);
 });*/
 
+
+//!!!!!!!!!NEED TO ADD SOMETHING COOL TO THE DONATE BUTTON!!!!!!!!!
 
 // I've added the following code:
 $("document").ready(function() { 
@@ -176,13 +179,13 @@ $("document").ready(function() {
     closeOnContentClick: true,
     closeBtnInside: false,
     fixedContentPos: true,
-    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+    mainClass: 'mfp-no-margins mfp-with-zoom',
     image: {
       verticalFit: true
     },
     zoom: {
       enabled: true,
-      duration: 300 // don't foget to change the duration also in CSS
+      duration: 300
     }
   });
 
@@ -191,13 +194,15 @@ $("document").ready(function() {
     closeOnContentClick: true,
     closeBtnInside: false,
     fixedContentPos: true,
-    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+    mainClass: 'mfp-no-margins mfp-with-zoom',
     image: {
       verticalFit: true
     },
     zoom: {
       enabled: true,
-      duration: 300 // don't foget to change the duration also in CSS
+      duration: 300
     }
   });       
 });
+
+
