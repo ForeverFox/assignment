@@ -115,7 +115,7 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
 
 
 // I've added the following code:
-$("document").ready(function() {
+$("document").ready(function() { 
   $("#BtnChurchill").click(function(info) {
     $("#churchillFigure").show();
     $("#churchillInfo").animate({left: "300"}, 1000, "swing");
